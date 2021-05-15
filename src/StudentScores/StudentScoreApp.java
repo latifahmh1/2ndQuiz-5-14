@@ -24,13 +24,13 @@ public class StudentScoreApp {
 
 			gradeList.add(userGrade.nextInt());
 
-			System.out.println("Would You like to enter another grade? "); // Request user input
+			System.out.println("Would You like to enter another grade? ");
 
-			String userSaid = userGrade.next().toLowerCase(); // Read user input
+			String userSaid = userGrade.next().toLowerCase(); 
 
 			if (userSaid.startsWith("y")) {
 
-				continue; // Request user input
+				continue;
 			} else {
 				System.out.println(" Thank You"
 						+ "   ");
@@ -70,11 +70,12 @@ public class StudentScoreApp {
 
 			if (grade > 0 && grade < 70)
 				fStudents++;
-			else continue;
+		 continue;
 		}
 
 		String highestGradePrint;
 		String lowestGradePrint;
+		String averageGradePrint;
 		 String messageA;
 		String messageB;
 		String messageC;
@@ -83,7 +84,7 @@ public class StudentScoreApp {
 		
 		System.out.println( highestGradePrint = " The highest grade is : " + highestGrade);
 		System.out.println( lowestGradePrint = (" The lowest grade is : " + lowestGrade));
-		String averageGradePrint = " The average grade is : " + averageGrade;
+		System.out.println( averageGradePrint = " The average grade is : " + averageGrade);
 		System.out.println( messageA = " The Number of A's : " + aStudents);
 		System.out.println( messageB= " The Number of B's : " + bStudents);
 		System.out.println( messageC = " The Number of C's "+ cStudents);
@@ -91,3 +92,5 @@ public class StudentScoreApp {
 		System.out.println( messageF = " The Number of F's :  " + dStudents);
 	}
 }
+
+
