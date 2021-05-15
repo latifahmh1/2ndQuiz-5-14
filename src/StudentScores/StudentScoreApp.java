@@ -9,7 +9,8 @@ public class StudentScoreApp {
 
 	public static void main(String[] args) {
 
-		String message = " Welcome ";
+		String message = " Welcome"
+				+ "   ";
 
 		System.out.println(message);
 
@@ -31,11 +32,11 @@ public class StudentScoreApp {
 
 				continue; // Request user input
 			} else {
-				System.out.println(" Thank You ");
+				System.out.println(" Thank You"
+						+ "   ");
 				break;
 			}
 		}
-
 		int highestGrade = Collections.max(gradeList);
 		int lowestGrade = Collections.min(gradeList);
 
@@ -43,35 +44,50 @@ public class StudentScoreApp {
 
 		for (Integer grade : gradeList) {
 			sum = sum + grade;
-
 		}
+
 		double averageGrade = sum / (double) gradeList.size();
 
 		Integer aStudents = 0;
 		Integer bStudents = 0;
 		Integer cStudents = 0;
+		Integer dStudents = 0;
 		Integer fStudents = 0;
 
 		for (Integer grade : gradeList) {
+			
 			if (grade > 89)
 				aStudents++;
 
 			if (grade > 79 && grade < 90)
 				bStudents++;
 
-			if (grade > 69)
+			if (grade > 69 && grade < 80)
 				cStudents++;
 
-			if (grade <= 69)
+			if (grade > 69 && grade < 71)
+				dStudents++;
+
+			if (grade > 0 && grade < 70)
 				fStudents++;
+			else continue;
 		}
 
-		String highestGradePrint = " Your highest grade is :" + highestGrade;
-		String lowestGradePrint = " Welcome ";
-		String message = " Welcome ";
-		String message = " Welcome ";
-		String message = " Welcome ";
-		String message = " Welcome ";
-		String message = " Welcome ";
+		String highestGradePrint;
+		String lowestGradePrint;
+		 String messageA;
+		String messageB;
+		String messageC;
+		String messageD;
+		String messageF;
+		
+		System.out.println( highestGradePrint = " The highest grade is : " + highestGrade);
+		System.out.println( lowestGradePrint = (" The lowest grade is : " + lowestGrade));
+		String averageGradePrint = " The average grade is : " + averageGrade;
+		System.out.println( messageA = " The Number of A's : " + aStudents);
+		System.out.println( messageB= " The Number of B's : " + bStudents);
+		System.out.println( messageC = " The Number of C's "+ cStudents);
+		System.out.println( messageD = " The Number of D's "+ dStudents);
+		System.out.println( messageF = " The Number of F's :  " + dStudents);
 	}
 }
